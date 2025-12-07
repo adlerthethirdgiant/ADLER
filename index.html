@@ -18,17 +18,26 @@ body {
   color: #f5f5f5;
 }
 
-    header {
-      background: linear-gradient(90deg, #111 0%, #1d1d1d 50%, #111 100%);
-      padding: 25px;
-      text-align: center;
-      font-size: 2.2rem;
-      font-family: 'Russo One', sans-serif;
-      color: #f8f8f8;
-      letter-spacing: 2px;
-      text-shadow: 0 0 10px #000;
-      border-bottom: 3px solid #e6b800;
-    }
+header {
+  display: flex;
+  align-items: center;          /* vertically center logo and text */
+  justify-content: center;      /* center the text/logo combo horizontally */
+  gap: 15px;                    /* space between logo and text */
+  background: linear-gradient(90deg, #111 0%, #1d1d1d 50%, #111 100%);
+  padding: 25px;
+  font-size: 2.2rem;
+  font-family: 'Russo One', sans-serif;
+  color: #f8f8f8;
+  letter-spacing: 2px;
+  text-shadow: 0 0 10px #000;
+  border-bottom: 3px solid #e6b800;
+}
+
+header img {
+  height: 50px;                 /* adjust logo size */
+  width: auto;                  /* keeps logo proportion */
+}
+
     .container {
       width: 90%;
       max-width: 1100px;
@@ -162,7 +171,12 @@ body {
 
 </head>
 <body>
-  <header>ADLER — Nitro Type Team</header>
+<header>
+  <img src="ntlogo.png" alt="ntlogo">
+  ADLER — Nitro Type Team
+</header>
+
+
 
   <script>
 // Daily Quote System
