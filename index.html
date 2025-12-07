@@ -104,6 +104,58 @@
       color: #ccc;
       font-weight: 400;
     }
+
+  /* Nitro Type Rank Badge – Animated */
+.nt-rank {
+  display: inline-block;
+  padding: 6px 14px;
+  font-weight: 700;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  border-radius: 6px;
+  background: linear-gradient(135deg, #ffcc00, #b88600 40%, #000 90%);
+  color: #000;
+  border: 1px solid #ffd43b;
+  box-shadow: 0 0 10px #ffcc00aa;
+  animation: rankGlow 2s infinite alternate;
+}
+
+@keyframes rankGlow {
+  from { box-shadow: 0 0 6px #ffcc0040; }
+  to   { box-shadow: 0 0 14px #ffcc00; }
+}
+
+
+  /* Nitro Type Member Card */
+.nt-card {
+  background: linear-gradient(145deg, #1a1a1a, #0d0d0d);
+  border-radius: 14px;
+  border: 2px solid #ffcc00;
+  padding: 16px;
+  margin-bottom: 20px;
+  color: #f2f2f2;
+  box-shadow: 0 0 12px #000, 0 0 18px #ffcc0055;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.nt-card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0 20px #ffcc0080, 0 0 30px #ffaa0050;
+}
+
+.nt-card h3 {
+  margin: 0 0 6px 0;
+  font-weight: 800;
+  color: #ffdd44;
+}
+
+.nt-card .role {
+  font-size: 0.85rem;
+  opacity: 0.9;
+}
+
+
+  
 </style>
 
 </head>
@@ -214,10 +266,18 @@ document.getElementById("dailyQuoteBox").textContent = dailyQuote;
           <div class="stats">🏁 Races: 4K</div>
           <a href="https://www.nitrotype.com/racer/radamesj3" target="BugattiChiron">View Profile</a>
         </div>
+
+        <div class="nt-card">
+  <h3>Racer Name</h3>
+  <span class="nt-rank">Elite</span>
+  <div class="role">Officer</div>
+</div>
+
         
       </div>
     </div>
   </div>
+
 
   <footer>© 2025 Adler Nitro Type Team — Built with GitHub Pages</footer>
 </body>
