@@ -83,6 +83,49 @@ body {
 <body>
   <header>ADLER — Nitro Type Team</header>
 
+  <script>
+// Daily Quote System
+const adlerQuotes = [
+"Follow your heart but take your brain with you. — Alfred Adler",
+"Meanings are not determined by situations, but we determine ourselves by the meanings we give situations. — Alfred Adler",
+"Empathy is seeing with the eyes of another, listening with the ears of another, and feeling with the heart of another. — Alfred Adler",
+"Trust only movement. Life happens at the level of events, not of words. — Alfred Adler",
+"The chief danger in life is that you may take too many precautions. — Alfred Adler"
+];
+
+
+const sunTzuQuotes = [
+"Victorious warriors win first and then go to war. — Sun Tzu",
+"In the midst of chaos, there is also opportunity. — Sun Tzu",
+"The supreme art of war is to subdue the enemy without fighting. — Sun Tzu",
+"Opportunities multiply as they are seized. — Sun Tzu",
+"He who is prudent and lies in wait for an enemy who is not, will be victorious. — Sun Tzu"
+];
+
+
+// Combine quote pools
+const allQuotes = [...adlerQuotes, ...sunTzuQuotes];
+
+
+// Choose quote based on day of year
+const dayOfYear = Math.floor((new Date() - new Date(new Date().getFullYear(), 0, 0)) / 86400000);
+const dailyQuote = allQuotes[dayOfYear % allQuotes.length];
+
+
+document.addEventListener("DOMContentLoaded", () => {
+document.getElementById("dailyQuoteBox").textContent = dailyQuote;
+});
+</script>
+
+
+<div class="container">
+
+
+<div class="card" style="border-left: 3px solid #4da6ff;">
+<h2>Daily Adlerian & Sun Tzu Quote</h2>
+<p id="dailyQuoteBox" style="font-size:1.1rem; line-height:1.6; color:#dcdcdc;"></p>
+</div>
+
   <div class="container">
     <div class="card">
       <h2>Welcome to Adler</h2>
