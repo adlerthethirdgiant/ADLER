@@ -21,7 +21,7 @@
     }
     .container {
       width: 90%;
-      max-width: 900px;
+      max-width: 1000px;
       margin: 40px auto;
     }
     .card {
@@ -45,6 +45,37 @@
       font-size: 0.9rem;
       color: #aaa;
     }
+    .members-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
+    .member-card {
+      background: #222;
+      border: 1px solid #333;
+      border-radius: 10px;
+      width: 220px;
+      padding: 15px;
+      text-align: center;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .member-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 0 15px #4da6ff;
+    }
+    .member-card img {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      margin-bottom: 10px;
+      border: 2px solid #4da6ff;
+    }
+    .stats {
+      margin-top: 10px;
+      font-size: 0.9rem;
+      color: #ccc;
+    }
   </style>
 </head>
 <body>
@@ -54,8 +85,8 @@
     <div class="card">
       <h2>Welcome to Adler</h2>
       <p>
-        Adler is a community of goal‑oriented racers inspired by encouragement, equality,
-        and consistent self‑improvement. Just like the psychologist Alfred Adler,
+        Adler is a community of goal-oriented racers inspired by encouragement, equality,
+        and consistent self-improvement. Just like the psychologist Alfred Adler,
         we believe in striving for growth and lifting others up.
       </p>
     </div>
@@ -73,29 +104,47 @@
       <h2>Team Info</h2>
       <ul>
         <li><strong>Team Tag:</strong> ADLER</li>
-        <li><strong>Focus:</strong> Inclusivity, equality, encouragement</li>
-        <li><strong>Team-Leader:</strong> A Cat Called Peony</li>
-        <li><strong>Officers:</strong> Smirks, Void, BugattiChiron, Hugh Jacked-man, adler-2k
-</li>
+        <li><strong>Focus:</strong> loyalty, equality, encouragement</li>
+        <li><strong>Team Captain:</strong> A Cat Called Peony</li>
       </ul>
     </div>
 
     <div class="card">
       <h2>Join Us</h2>
       <p>
-        No minimum race, No minimum speed, No special requirements to join as we only ask and expect your loyalty, Interested in racing with us? Visit our Nitro Type page:
+         No minimum race, No minimum speed, No special requirements to join as we only ask and expect your loyalty, Interested in racing with us? Visit our Nitro Type page:
         <br /><br />
         <a href="https://www.nitrotype.com/team/ADLER">Click here to request to join</a>
         <a href="https://discord.gg/RgCVUUwnbW">Click here to join our discord server</a>
       </p>
     </div>
-  </div>
 
-  <div class="card">
-<h2>Team Members</h2>
-<p>Below is a live embed of the ADLER team page from Nitro Type. It automatically updates with members, races, stats, and profiles.</p>
-<iframe src="https://www.nitrotype.com/team/ADLER" style="width:100%; height:600px; border:1px solid #333; border-radius:10px;"></iframe>
-</div>
+    <div class="card">
+      <h2>Meet the Adleriar Racers</h2>
+      <p>Check out our team members, their stats, and profiles!</p>
+      <div class="members-grid">
+        <div class="member-card">
+          <img src="https://www.nitrotype.com/images/profiles/default.png" alt="Dreamboat" />
+          <h3>Dreamboat</h3>
+          <div class="stats">🏁 Races: 1234<br>🏆 Wins: 567</div>
+          <a href="https://www.nitrotype.com/racer/Dreamboat" target="_blank">View Profile</a>
+        </div>
+        <div class="member-card">
+          <img src="https://www.nitrotype.com/images/profiles/default.png" alt="Officer1" />
+          <h3>Officer1</h3>
+          <div class="stats">🏁 Races: 987<br>🏆 Wins: 432</div>
+          <a href="https://www.nitrotype.com/racer/Officer1" target="_blank">View Profile</a>
+        </div>
+        <div class="member-card">
+          <img src="https://www.nitrotype.com/images/profiles/default.png" alt="RacerX" />
+          <h3>RacerX</h3>
+          <div class="stats">🏁 Races: 678<br>🏆 Wins: 210</div>
+          <a href="https://www.nitrotype.com/racer/RacerX" target="_blank">View Profile</a>
+        </div>
+        <!-- Copy and paste this card for more members -->
+      </div>
+    </div>
+  </div>
 
   <footer>© 2025 Adler Nitro Type Team — Built with GitHub Pages</footer>
 </body>
