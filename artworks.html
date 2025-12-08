@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Artwork — ADLER Collection</title>
+<style>
+body {
+  margin: 0;
+  background: #0f0f0f;
+  color: #eaeaea;
+  font-family: 'Roboto', sans-serif;
+}
+
+.art-header {
+  padding: 18px;
+  text-align: center;
+  font-size: 1.8rem;
+  letter-spacing: 2px;
+  border-bottom: 2px solid #e6b800;
+}
+
+.viewer-wrapper {
+  display: flex;
+  height: calc(100vh - 70px);
+}
+
+#openseadragon-viewer {
+  flex: 3;
+  background: #000;
+}
+
+.art-info {
+  flex: 1;
+  padding: 25px;
+  background: #111;
+  border-left: 1px solid #222;
+}
+
+.art-info h2 {
+  margin-top: 0;
+  letter-spacing: 1px;
+}
+
+.description {
+  margin-top: 15px;
+  line-height: 1.6;
+  color: #cfcfcf;
+}
+
+  </style>
+
+  <link rel="stylesheet" href="art.css">
+  <script src="https://cdn.jsdelivr.net/npm/openseadragon@4.1/build/openseadragon/openseadragon.min.js"></script>
+</head>
+<body>
+
+<header class="art-header">
+  ADLER — Featured Artwork
+</header>
+
+<main class="viewer-wrapper">
+  <div id="openseadragon-viewer"></div>
+
+  <aside class="art-info">
+    <h2>Artist Name</h2>
+    <p><strong>Title:</strong> Artwork Title</p>
+    <p><strong>Year:</strong> 2025</p>
+    <p><strong>Medium:</strong> Spray paint on concrete</p>
+    <p class="description">
+      Description, intent, symbolism, background.
+    </p>
+  </aside>
+</main>
+
+<script>
+  OpenSeadragon({
+    id: "openseadragon-viewer",
+    prefixUrl: "https://cdn.jsdelivr.net/npm/openseadragon@4.1/build/openseadragon/images/",
+    tileSources: "artwork.dzi"
+  });
+</script>
+
+</body>
+</html>
