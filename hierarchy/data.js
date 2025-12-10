@@ -11,9 +11,9 @@ const TEAMS = [
 ];
 
 const PEOPLE = [
-  { id:"u1", name:"Dreamboat", role:"Team Leader", avatar:"avatars/dreamboat.png", groupId:"team-core", bio:"Founder and team lead." },
-  { id:"u2", name:"OfficerA", role:"Officer", avatar:"avatars/officerA.png", groupId:"team-core", bio:"Support & recruitment." },
-  { id:"u3", name:"OfficerB", role:"Officer", avatar:"avatars/officerB.png", groupId:"team-core", bio:"Events coordinator." },
+  { id:"u1", name:"A Cat Called Peony", role:"Team Leader", avatar:"avatar/dreamboat.png", groupId:"team-core", bio:"Founder and team lead." },
+  { id:"u2", name:"Smirks", role:"Officer", avatar:"avatar/avatarsmi.webp", groupId:"team-core", bio:"Support & recruitment." },
+  { id:"u3", name:"Sub 2 TT Sushi", role:"Officer", avatar:"avatar/avatar.webp", groupId:"team-core", bio:"Events coordinator." },
 
   { id:"u4", name:"TaggerX", role:"Art Lead", avatar:"avatars/taggerx.png", groupId:"team-art", bio:"Graffiti & visuals." },
   { id:"u5", name:"SprayOne", role:"Artist", avatar:"avatars/spray1.png", groupId:"team-art", bio:"Street and digital art." },
