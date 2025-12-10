@@ -4,25 +4,162 @@
    Edit this file to update the chart. Keep IDs unique.
 */
 
+/* =========================================================
+   TEAMS
+   ---------------------------------------------------------
+   - Describes WHAT the teams are
+   - No members listed here
+   - leaderId points to a person in PEOPLE
+   ========================================================= */
+
 const TEAMS = [
-  { id: "team-core", name: "Core Officers", color: "#e6b800", leaderId: "u1", members: ["u1","u2","u3"] },
-  { id: "team-art", name: "Creative / Art", color: "#e63946", leaderId: "u4", members: ["u4","u5","u6","u7"] },
-  { id: "team-race", name: "Racing", color: "#4da6ff", leaderId: "u8", members: ["u8","u9"] }
+  {
+    id: "team-core",
+    name: "Core Officers",
+    color: "#e6b800",
+    leaderId: "u1" // A Cat Called Peony
+  },
+  {
+    id: "team-art",
+    name: "Creative / Art",
+    color: "#e63946",
+    leaderId: "u3" // TT Sushi
+  },
+  {
+    id: "team-race",
+    name: "Racing",
+    color: "#4da6ff",
+    leaderId: "u2" // Smirks
+  }
 ];
+
+
+/* =========================================================
+   PEOPLE
+   ---------------------------------------------------------
+   - Each person exists ONCE
+   - No roles here (roles change per team)
+   - Avatars and bios stay consistent everywhere
+   ========================================================= */
 
 const PEOPLE = [
-  { id:"u1", name:"A Cat Called Peony", role:"Team Leader", avatar:"../avatar/hierarchytc.webp", groupId:"team-core", bio:"Founder and team lead." },
-  { id:"u2", name:"Smirks", role:"Officer", avatar:"../avatar/hierarchyoff.webp", groupId:"team-core", bio:"Support & recruitment." },
-  { id:"u3", name:"Sub 2 TT Sushi", role:"Officer", avatar:"../avatar/hierarchyoff.webp", groupId:"team-core", bio:"Events coordinator." },
-
-  { id:"u4", name:"TaggerX", role:"Art Lead", avatar:"avatars/taggerx.png", groupId:"team-art", bio:"Graffiti & visuals." },
-  { id:"u5", name:"SprayOne", role:"Artist", avatar:"avatars/spray1.png", groupId:"team-art", bio:"Street and digital art." },
-  { id:"u6", name:"Stencil12", role:"Artist", avatar:"avatars/stencil12.png", groupId:"team-art", bio:"Design systems." },
-  { id:"u7", name:"NewOfficer", role:"Junior Artist", avatar:"avatars/newofficer.png", groupId:"team-art", bio:"Up-and-coming artist." },
-
-  { id:"u8", name:"Speedy", role:"Race Captain", avatar:"avatars/speedy.png", groupId:"team-race", bio:"Races & tactics." },
-  { id:"u9", name:"NitroKid", role:"Racer", avatar:"avatars/nitrokid.png", groupId:"team-race", bio:"Daily racer." }
+  {
+    id: "u1",
+    name: "A Cat Called Peony",
+    avatar: "../avatar/hierarchytc.webp",
+    bio: "Founder and overall team leader."
+  },
+  {
+    id: "u2",
+    name: "Smirks",
+    avatar: "../avatar/hierarchyoff.webp",
+    bio: "Core officer and racing strategist."
+  },
+  {
+    id: "u3",
+    name: "TT Sushi",
+    avatar: "../avatar/hierarchyoff.webp",
+    bio: "Core officer and creative director."
+  },
+  {
+    id: "u5",
+    name: "SprayOne",
+    avatar: "avatars/spray1.png",
+    bio: "Street and digital art."
+  },
+  {
+    id: "u6",
+    name: "Stencil12",
+    avatar: "avatars/stencil12.png",
+    bio: "Design systems."
+  },
+  {
+    id: "u7",
+    name: "NewOfficer",
+    avatar: "avatars/newofficer.png",
+    bio: "Up-and-coming artist."
+  },
+  {
+    id: "u8",
+    name: "Speedy",
+    avatar: "avatars/speedy.png",
+    bio: "Competitive racer."
+  },
+  {
+    id: "u9",
+    name: "NitroKid",
+    avatar: "avatars/nitrokid.png",
+    bio: "Daily racer."
+  }
 ];
+
+
+/* =========================================================
+   MEMBERSHIPS  (MOST IMPORTANT PART)
+   ---------------------------------------------------------
+   - This defines WHO is in WHICH TEAM
+   - And WHAT ROLE they have in THAT team
+   - Same person can appear multiple times
+   ========================================================= */
+
+const MEMBERSHIPS = [
+  /* ---------- Core Officers ---------- */
+  {
+    personId: "u1",
+    teamId: "team-core",
+    role: "Team Leader"
+  },
+  {
+    personId: "u2",
+    teamId: "team-core",
+    role: "Officer"
+  },
+  {
+    personId: "u3",
+    teamId: "team-core",
+    role: "Officer"
+  },
+
+  /* ---------- Creative / Art ---------- */
+  {
+    personId: "u3",
+    teamId: "team-art",
+    role: "Art Lead" // TT Sushi leads Art
+  },
+  {
+    personId: "u5",
+    teamId: "team-art",
+    role: "Artist"
+  },
+  {
+    personId: "u6",
+    teamId: "team-art",
+    role: "Artist"
+  },
+  {
+    personId: "u7",
+    teamId: "team-art",
+    role: "Junior Artist"
+  },
+
+  /* ---------- Racing ---------- */
+  {
+    personId: "u2",
+    teamId: "team-race",
+    role: "Race Captain" // Smirks leads Racing
+  },
+  {
+    personId: "u8",
+    teamId: "team-race",
+    role: "Racer"
+  },
+  {
+    personId: "u9",
+    teamId: "team-race",
+    role: "Racer"
+  }
+];
+
 
 /* ------------ rendering logic below (do not edit unless you know JS) ------------- */
 
