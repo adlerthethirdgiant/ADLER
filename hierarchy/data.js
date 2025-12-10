@@ -213,12 +213,30 @@ const MEMBERSHIPS = [
       const memberGrid = document.createElement('div');
       memberGrid.className = 'member-list';
 
-      // collect visible members
-      const members = (team.members || []).map(id => peopleById[id]).filter(Boolean);
-      const visible = members.filter(p=>{
-        if(!term) return true;
-        return p.name.toLowerCase().includes(term) || p.role.toLowerCase().includes(term);
-      });
+// collect members from MEMBERSHIPS (✅ correct model)
+const members = MEMBERSHIPS
+  .filter(m => m.teamId === team.id)
+  .map(m => {
+    const person = peopleById[m.personId];
+    if (!person) return null;
+
+    // merge role into person for THIS team
+    return {
+      ...person,
+      role: m.role
+    };
+  })
+  .filter(Boolean);
+
+// search filter
+const visible = members.filter(p => {
+  if (!term) return true;
+  return (
+    p.name.toLowerCase().includes(term) ||
+    p.role.toLowerCase().includes(term)
+  );
+});
+
 
       visible.forEach(p=>{
         const m = document.createElement('div');
