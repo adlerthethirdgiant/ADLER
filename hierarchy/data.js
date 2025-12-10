@@ -57,40 +57,43 @@ const PEOPLE = [
   },
   {
     id: "u3",
-    name: "TT Sushi",
+    name: "Sub 2 Tt sushi YT",
     avatar: "../avatar/hierarchyoff.webp",
     bio: "Core officer and creative director."
   },
   {
     id: "u5",
-    name: "SprayOne",
-    avatar: "avatars/spray1.png",
+    name: "Void",
+    avatar: "../avatar/hierarchytm.webp",
     bio: "Street and digital art."
   },
   {
     id: "u6",
-    name: "Stencil12",
-    avatar: "avatars/stencil12.png",
+    name: "Hugh Jacked-man",
+    avatar: "../avatar/hierarchytm.webp",
     bio: "Design systems."
   },
   {
     id: "u7",
-    name: "NewOfficer",
-    avatar: "avatars/newofficer.png",
+    name: "BugattiChiron",
+        avatar: "../avatar/hierarchytm.webp",
     bio: "Up-and-coming artist."
   },
   {
     id: "u8",
-    name: "Speedy",
-    avatar: "avatars/speedy.png",
+    name: "annelise04",
+     avatar: "../avatar/hierarchytm.webp",
+
     bio: "Competitive racer."
   },
   {
     id: "u9",
-    name: "NitroKid",
-    avatar: "avatars/nitrokid.png",
+    name: "FashionableMaroonKiwi",
+    avatar: "../avatar/hierarchytm.webp",
+
     bio: "Daily racer."
   }
+   
 ];
 
 
