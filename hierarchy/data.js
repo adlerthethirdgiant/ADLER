@@ -71,20 +71,20 @@ const PEOPLE = [
     id: "u6",
     name: "Hugh Jacked-man",
     avatar: "../avatar/hierarchytm.webp",
-    bio: "Design systems."
+    bio: "Competitive Racer."
   },
   {
     id: "u7",
     name: "BugattiChiron",
         avatar: "../avatar/hierarchytm.webp",
-    bio: "Up-and-coming artist."
+    bio: "Competitive Racer."
   },
   {
     id: "u8",
     name: "annelise04",
      avatar: "../avatar/hierarchytm.webp",
 
-    bio: "Competitive racer."
+    bio: "Daily racer."
   },
   {
     id: "u9",
@@ -143,13 +143,13 @@ const MEMBERSHIPS = [
   },
   {
     personId: "u6",
-    teamId: "team-art",
-    role: "Artist"
+    teamId: "team-race",
+    role: "Racer"
   },
   {
     personId: "u7",
-    teamId: "team-art",
-    role: "Junior Artist"
+    teamId: "team-race",
+    role: "Racer"
   },
 
   /* ---------- Racing ---------- */
