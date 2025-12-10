@@ -92,6 +92,13 @@ const PEOPLE = [
     avatar: "../avatar/hierarchytm.webp",
 
     bio: "Daily racer."
+  },
+  {
+    id: "u10",
+    name: "Camila",
+    avatar: "../avatar/hierarchytm.webp",
+
+    bio: "Up-and-coming artist."
   }
    
 ];
@@ -131,7 +138,7 @@ const MEMBERSHIPS = [
   },
   {
     personId: "u5",
-    teamId: "team-art",
+    teamId: "team-race",
     role: "Artist"
   },
   {
@@ -160,6 +167,11 @@ const MEMBERSHIPS = [
     personId: "u9",
     teamId: "team-race",
     role: "Racer"
+  },
+     {
+    personId: "u10",
+    teamId: "team-art",
+    role: "Junior Artist"
   }
 ];
 
