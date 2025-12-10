@@ -15,19 +15,19 @@
 const TEAMS = [
   {
     id: "team-core",
-    name: "Core Officers",
+    name: "Highest-Ranking Officers",
     color: "#e6b800",
     leaderId: "u1" // A Cat Called Peony
   },
   {
     id: "team-art",
-    name: "Creative / Art",
+    name: "Public Affair Officer (PAO)",
     color: "#e63946",
     leaderId: "u3" // TT Sushi
   },
   {
     id: "team-race",
-    name: "Racing",
+    name: "Special Operations Recruitment (SOR)",
     color: "#4da6ff",
     leaderId: "u2" // Smirks
   }
@@ -65,7 +65,7 @@ const PEOPLE = [
     id: "u5",
     name: "Void",
     avatar: "../avatar/hierarchytm.webp",
-    bio: "Street and digital art."
+    bio: "Daily racer"
   },
   {
     id: "u6",
