@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>ADLER — Team Hierarchy</title>
+
+  <!-- Fonts (same style as main site) -->
+  <link href="https://fonts.googleapis.com/css2?family=Russo+One&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="hierarchy.css" />
+</head>
+<body>
+
+  <header class="top-header">
+    <img src="../legend-league-logo.png" alt="Legend Logo" class="header-logo">
+    <div class="header-title">ADLER — Team Hierarchy</div>
+  </header>
+
+  <main class="container">
+    <section class="controls card">
+      <div class="control-row">
+        <input id="searchInput" type="search" placeholder="Search by name, role, or group…" />
+        <select id="groupFilter">
+          <option value="">All groups</option>
+        </select>
+        <button id="expandAll">Expand All</button>
+        <button id="collapseAll">Collapse All</button>
+      </div>
+    </section>
+
+    <section class="org-wrap card">
+      <div id="orgChart" class="org-chart"></div>
+    </section>
+
+    <section class="card legend">
+      <h3>Legend & Notes</h3>
+      <p>Click a team title to expand/collapse. Click a member to open a detail panel. Edit `data.js` to add/remove members or change leaders.</p>
+    </section>
+  </main>
+
+  <!-- Modal for member details -->
+  <div id="memberModal" class="modal" aria-hidden="true">
+    <div class="modal-inner">
+      <button class="modal-close" id="closeModal">×</button>
+      <div id="modalContent"></div>
+    </div>
+  </div>
+
+  <script src="data.js"></script>
+  <script src="hierarchy.js"></script>
+</body>
+</html>
