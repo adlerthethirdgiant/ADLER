@@ -134,3 +134,25 @@ button:hover{opacity:0.95}
   .member-list{grid-template-columns:1fr}
   .modal-body{flex-direction:column;align-items:center}
 }
+
+.avatar-container {
+  position: relative;
+  display: inline-block;
+}
+
+.multi-role-badge {
+  position: absolute;
+  bottom: -5px;  /* just below avatar */
+  right: -5px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: #9b59b6;  /* purple badge */
+  border: 2px solid #fff;     /* small white outline */
+}
+
+.multi-role-badge::after {
+  content: attr(title);
+  display: none;  /* tooltip handled by title attribute */
+}
+
