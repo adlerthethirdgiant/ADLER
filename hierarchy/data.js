@@ -178,11 +178,6 @@ const MEMBERSHIPS = [
 
 /* ------------ rendering logic below (do not edit unless you know JS) ------------- */
 
-members.sort((a, b) => {
-  if (a.id === team.leaderId) return -1;
-  if (b.id === team.leaderId) return 1;
-  return 0;
-});
 
 
 (function(){
@@ -246,6 +241,14 @@ const members = MEMBERSHIPS
     };
   })
   .filter(Boolean);
+
+       // ✅ Ensure leader is always first
+members.sort((a, b) => {
+  if (a.id === team.leaderId) return -1;
+  if (b.id === team.leaderId) return 1;
+  return 0;
+});
+
 
 // search filter
 const visible = members.filter(p => {
