@@ -201,78 +201,55 @@ header img {
   transform: scale(1.05);
   box-shadow: 0 0 12px rgba(230, 57, 70, 0.5);
 }
-
-  /* Section Container */
-.car-of-week {
-  width: 100%;
-  padding: 40px 10%;
-  background: linear-gradient(135deg, #0d0d0d, #1a1a1a);
-  border-top: 2px solid #ff0040;
-  color: #fff;
+/* === Car of the Week Section === */
+.car-spotlight {
+  margin: 40px auto;
+  padding: 20px;
+  width: 85%;
+  max-width: 700px;
   font-family: 'Roboto', sans-serif;
 }
 
-/* Heading */
-.cow-header {
-  text-align: center;
-  margin-bottom: 30px;
+.car-spotlight h2 {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+  color: #ffd54f;
+  font-weight: 700;
+  letter-spacing: 1px;
 }
 
-.cow-header h2 {
-  font-size: 2.5rem;
-  margin: 0;
-  font-weight: 800;
-  color: #ff3366;
-  text-shadow: 0px 0px 10px rgba(255, 51, 102, 0.4);
-}
-
-.cow-header p {
-  color: #cccccc;
-  margin-top: 5px;
-}
-
-/* Video Container */
-.car-showcase {
+.car-card {
+  background: rgba(20, 20, 20, 0.85);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 18px;
+  border-radius: 14px;
   display: flex;
-  justify-content: center;
+  gap: 20px;
+  align-items: center;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.35);
 }
 
-/* Outer wrapper with glow */
-.video-wrapper {
-  position: relative;
-  width: 500px;
-  padding: 20px;
-  background: rgba(255, 255, 255, 0.05);
-  border-radius: 20px;
-  box-shadow:
-    0 0 20px rgba(255, 51, 102, 0.4),
-    inset 0 0 10px rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(5px);
-}
-
-/* Video Blending Magic */
-.blended-video {
-  width: 100%;
+.car-video video {
+  width: 220px;
   height: auto;
-  display: block;
-
-  /* Main trick */
-  mix-blend-mode: screen;
-
-  /* Helps reduce the dark rectangular MP4 background */
-  filter: brightness(1.5) contrast(1.2) saturate(1.1);
-
-  /* Smooth edges were visible to the user */
-  mask-image: radial-gradient(circle, white 70%, transparent 100%);
+  mix-blend-mode: lighten;
+  filter: brightness(1.2) contrast(1.1);
 }
 
-/* Optional hover animation */
-.video-wrapper:hover {
-  transform: scale(1.02);
-  transition: 0.3s ease;
-  box-shadow:
-    0 0 30px rgba(255, 0, 80, 0.7),
-    inset 0 0 12px rgba(255, 255, 255, 0.15);
+.car-info {
+  flex: 1;
+}
+
+.car-info h3 {
+  margin: 0 0 5px 0;
+  font-size: 1.25rem;
+  color: #ffffff;
+}
+
+.car-info p {
+  font-size: 0.95rem;
+  color: #dcdcdc;
+  line-height: 1.4;
 }
 
 
@@ -332,18 +309,25 @@ document.getElementById("dailyQuoteBox").textContent = dailyQuote;
 <p id="dailyQuoteBox" style="font-size:1.1rem; line-height:1.6; color:#dcdcdc;"></p>
 </div>
 
-  <section class="car-of-week">
-  <div class="cow-header">
-    <h2>🚗 Car of the Week</h2>
-    <p>Featuring premium animated racing assets, Nitro-Type inspired.</p>
-  </div>
+<section class="car-spotlight">
+    <h2>Car of the Week</h2>
 
-  <div class="car-showcase">
-    <div class="video-wrapper">
-      <video class="blended-video" src="cow.mp4" autoplay loop muted></video>
+    <div class="car-card">
+        <div class="car-video">
+            <video src="PixVerse_V5.5_Image_Text_540P_Animate_the_prem.mp4" autoplay loop muted></video>
+        </div>
+
+        <div class="car-info">
+            <h3>BMW Graffiti X TT Sushi Edition</h3>
+            <p>
+                A premium animated showcase of the TT Sushi custom BMW — graffiti-styled, 
+                neon-lit, and tuned for competition. This animation represents our team's 
+                official “Car of the Week” featured vehicle.
+            </p>
+        </div>
     </div>
-  </div>
 </section>
+
 
 
 
